@@ -1,0 +1,33 @@
+{
+  "name": "english-tutor-landing",
+  "version": "1.0.0",
+  "description": "Portfolio demo: English tutor landing page with trial lesson applications, Express backend and SQLite admin panel.",
+  "main": "backend/server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "dev": "node backend/server.js",
+    "test": "node --test tests/*.test.js"
+  },
+  "keywords": [
+    "portfolio",
+    "express",
+    "sqlite",
+    "landing"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "better-sqlite3": "^11.8.1",
+    "dotenv": "^16.4.7",
+    "express": "^4.22.3",
+    "express-rate-limit": "^8.7.0"
+  },
+  "optionalDependencies": {
+    "@ydbjs/auth-yandex-cloud": "*",
+    "@ydbjs/core": "*",
+    "@ydbjs/query": "*"
+  },
+  "engines": {
+    "node": ">=22.23.3 <23"
+  }
+}

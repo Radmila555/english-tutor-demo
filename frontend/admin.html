@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Админ-панель заявок — English Tutor</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body class="admin-page">
+    <main class="admin-shell">
+      <section class="admin-top">
+        <div>
+          <p class="eyebrow">Админ-панель</p>
+          <h1>Заявки на пробное занятие</h1>
+          <p id="adminDescription">Загружаем панель заявок…</p>
+        </div>
+        <a class="admin-note" href="/">Вернуться на сайт</a>
+      </section>
+
+      <section class="admin-filters" aria-label="Фильтр по статусу">
+        <button class="filter-button is-active" type="button" data-filter="all">все</button>
+        <button class="filter-button" type="button" data-filter="new">новые</button>
+        <button class="filter-button" type="button" data-filter="contact">связаться</button>
+        <button class="filter-button" type="button" data-filter="done">обработанные</button>
+      </section>
+
+      <section class="admin-card" aria-label="Таблица заявок">
+        <div class="table-wrap">
+          <table class="admin-table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Дата</th>
+                <th>Имя</th>
+                <th>Контакт</th>
+                <th>Уровень</th>
+                <th>Цель</th>
+                <th>Сложность</th>
+                <th>Удобное время</th>
+                <th>Статус</th>
+              </tr>
+            </thead>
+            <tbody id="applicationsTableBody"></tbody>
+          </table>
+        </div>
+        <div class="admin-empty" id="adminEmptyState" hidden>
+          Пока нет заявок с выбранным статусом.
+        </div>
+      </section>
+
+      <p class="admin-message" id="adminMessage" role="status" aria-live="polite"></p>
+    </main>
+
+    <script src="./admin.js"></script>
+  </body>
+</html>
